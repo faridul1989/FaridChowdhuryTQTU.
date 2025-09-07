@@ -81,3 +81,26 @@
   }
 }
 ```
+# Voyager 1 TQTU Dataset
+
+This repository contains a dataset from Voyager 1’s Plasma Wave Subsystem (PWS) for the article *"Voyager Data and the Absence of Dark Energy: A TQTU Perspective"* by Prof. Dr. Md. Faridul Islam Chowdhury (Tanfarid Vision Research Institute, 2025). The data focus on plasma wave detections in the local interstellar medium (LISM), including the audible “hum” from the video *"The Strange Sound Voyager 1 Was Never Meant to Hear"* (YouTube, 2025-09-02), interpreted under the Tanfarid Quantum Thermodynamic Universe (TQTU) framework.
+
+## Contents
+- **File**: `voyager1_plasma_wave_data.json`
+- **Description**: JSON dataset with Voyager 1 measurements:
+  - **Mission Metadata**: Launch (1977), heliopause crossing (2012), distance (164.7 AU).
+  - **Plasma Waves**: Frequencies (2–3 kHz), electron density (0.08–0.147 cm⁻³), energy (~0.1–0.2 eV cm⁻³).
+  - **Energy Density**: Total ~2.6 eV cm⁻³, charged particles 41.5%, no dark energy residuals.
+  - **TQTU Interpretations**: \(\Phi\)-fields, entropy duality (\(S = R + D\)), charged dominance.
+  - **Video Reference**: Links to YouTube video for context.
+- **Sources**: Peer-reviewed (Science, ApJ, Nature Astronomy, 2013–2022).
+- **License**: MIT License.
+
+## Usage
+- **Access**: Download `voyager1_plasma_wave_data.json` for analysis in Python, MATLAB, etc.
+- **Example**:
+  ```python
+  import json
+  with open('voyager1_plasma_wave_data.json', 'r') as file:
+      data = json.load(file)
+  print(data['voyager1_plasma_wave_data']['plasma_waves']['data'])
