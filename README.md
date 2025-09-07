@@ -189,3 +189,124 @@ This repository contains a dataset from Voyager 1’s Plasma Wave Subsystem (PWS
   }
 }
 ```
+```json
+{
+  "voyager1_data": {
+    "mission_metadata": {
+      "launch_date": "1977-09-05",
+      "heliopause_crossing": "2012-08-25",
+      "distance_2025": {
+        "miles": 15000000000,
+        "km": 24000000000,
+        "au": 164.7
+      },
+      "velocity": {
+        "au_per_year": 3.6,
+        "km_per_s": 17
+      },
+      "direction": "35° north of ecliptic, toward Ophiuchus",
+      "instrument": {
+        "name": "Plasma Wave Subsystem (PWS)",
+        "measures": "Electron density fluctuations, plasma waves",
+        "frequency_range": "10 Hz–56 kHz"
+      },
+      "data_context": "Interstellar medium, post-heliopause, 2012–2025"
+    },
+    "trajectory": {
+      "description": "Hyperbolic escape path set by gravity assists",
+      "data": [
+        {
+          "parameter": "Jupiter Flyby",
+          "date": "1979-03-05",
+          "distance_km": 280000,
+          "velocity_boost_km_s": 10,
+          "notes": "Redirected toward Saturn",
+          "source": ["NASA Science 2025", "Voyager Program 2025"]
+        },
+        {
+          "parameter": "Saturn/Titan Flyby",
+          "date": "1980-11-12",
+          "distance_km": "Titan: 4000, Saturn: 124000",
+          "velocity_boost_km_s": 7,
+          "direction_change": "35° north of ecliptic",
+          "notes": "Set interstellar path",
+          "source": ["NASA Science 2025", "TheSkyLive.com 2025"]
+        },
+        {
+          "parameter": "TCMs",
+          "example_date": "2017-12",
+          "hydrazine_kg": 0.1,
+          "delta_v_m_s": "<0.01",
+          "notes": "For antenna alignment, not trajectory change",
+          "source": ["Attitude Control 2017"]
+        },
+        {
+          "parameter": "LISM Influence",
+          "force_N": "10^-20",
+          "notes": "Negligible plasma force; no trajectory alteration",
+          "source": ["Ocker et al. 2021"]
+        }
+      ]
+    },
+    "plasma_waves": {
+      "description": "Persistent electron density oscillations translated to audible 'hum' at 2–3 kHz",
+      "data": [
+        {
+          "parameter": "Wave Frequency",
+          "value_hz": "2000–3000",
+          "average_hz": 2400,
+          "notes": "Detected 2017–2025; denser LISM vs. heliosphere (~300 Hz)",
+          "source": ["Gurnett et al. 2013", "Gurnett et al. 2015", "Ocker et al. 2021"]
+        },
+        {
+          "parameter": "Electron Plasma Density",
+          "value_cm3": "0.05–0.147",
+          "average_cm3": 0.1,
+          "notes": "Derived from f_p ≈ 9√n_e kHz; matches 0.08–0.147 cm^-3",
+          "source": ["Gurnett et al. 2015", "Ocker et al. 2021", "Burlaga et al. 2022"]
+        },
+        {
+          "parameter": "Detection Events",
+          "value": "Bursts: Oct–Nov 2012, Apr–May 2013; Persistent: 2017–2025",
+          "event_count": ">100000",
+          "notes": "CME-triggered bursts; persistent 'hum' maps turbulence",
+          "source": ["Gurnett et al. 2013", "Ocker et al. 2021"]
+        },
+        {
+          "parameter": "Thermal Energy Density",
+          "value_eV_cm3": "0.09–0.18",
+          "notes": "Contributes to charged particle energy (~1.08 eV cm^-3)",
+          "source": ["Ocker et al. 2021", "Chowdhury 2025"]
+        }
+      ],
+      "energy_density": {
+        "total_eV_cm3": 2.6,
+        "breakdown": {
+          "cosmic_rays": "0.83–1.02",
+          "magnetic": 0.62,
+          "thermal_plasma": 0.18,
+          "plasma_waves": "0.09–0.18",
+          "radiation": "0.6–0.8",
+          "kinetic_turbulent": "0.1–0.3"
+        },
+        "charged_particle_contribution": {
+          "value_eV_cm3": 1.08,
+          "percentage": 41.5,
+          "notes": "No dark energy residuals (~10^-8 eV cm^-3)"
+        }
+      },
+      "tqt_interpretation": {
+        "phi_field": "Polarity gradients drive plasma oscillations, structuring LISM",
+        "entropy_duality": "Regenerative (R) wave excitation vs. degenerative (D) damping, ratio ~\gr (1.618)",
+        "charged_dominance": "Plasma waves and particles dominate, negating dark energy"
+      }
+    },
+    "video_reference": {
+      "title": "The Strange Sound Voyager 1 Was Never Meant to Hear",
+      "url": "https://youtu.be/Cxo5VyRtJUo",
+      "published_date": "2025-09-02",
+      "notes": "Describes audible translation of 2–3 kHz plasma waves"
+    }
+  }
+}
+```
